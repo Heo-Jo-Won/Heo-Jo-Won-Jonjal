@@ -1,0 +1,218 @@
+body {
+  font-family: 'MapleStory', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #b9e9ff; /* 부드러운 크림색 배경 */
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #fffba9; /* 연하게 변경 */
+    color: #000000;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .featured-post {
+    display: flex;
+    align-items: center;
+  }
+  
+  .featured-post img {
+    max-width: 50%;
+    margin-right: 2rem;
+  }
+  
+  .post-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    background-color: #555; /* 연하게 변경 */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+  
+  .blog-post {
+    /* Blog post card styles go here */
+  }
+  
+  footer {
+    background-color: #c61f1f; /* 연하게 변경 */
+    color: #f2f220;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* ... (이전 코드와 동일) ... */
+
+.sidebar {
+    flex: 1;
+    padding: 1rem;
+    background-color: #cd2626;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* ... (이전 코드와 동일) ... */
+
+.sidebar {
+    position: fixed; /* 우측에 고정 */
+    top: 100px; /* 상단으로 고정 */
+    right: 0; /* 우측으로 고정 */
+    width: 250px; /* 사이드바의 너비 */
+    padding: 1rem;
+    background-color: #e8db28;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+/* 슬라이드쇼 컨테이너 크기 고정 */
+.slideshow {
+    width: 300px;  /* 요청하신 가로 크기 */
+    height: 200px; /* 요청하신 세로 크기 */
+    margin: 20px auto; /* 중앙 정렬 */
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    border-radius: 12px; /* 트렌디한 라운드 처리 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover; /* 중요: 이미지 비율을 유지하며 300x200 박스를 채움 */
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    position: absolute; /* 이미지들이 겹쳐서 나타나도록 설정 */
+    left: 0;
+    top: 0;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+  /* 메이플스토리 글꼴 적용 */
+@font-face {
+    font-family: 'MapleStory';
+    src: url('WooriMelon-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'MapleStory', Arial, sans-serif;
+  }
+
+  /* ... (기존 코드와 동일) ... */
+
+.post-form {
+    margin-top: 2rem;
+  }
+  
+  .post-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .post-form input,
+  .post-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  #post-container {
+    margin-top: 2rem;
+  }
+  
+  .post {
+    border: 1px solid #4b4747;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ... (이전 코드와 동일) ... */
+
+/* 일주일 일정을 위한 스타일 */
+.weekly-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+  
+  .weekly-schedule th, .weekly-schedule td {
+    padding: 1rem;
+    border: 1px solid #7f7f7f;
+    text-align: center;
+  }
+  
+  .weekly-schedule th {
+    background-color: #f1ff5a;
+    font-size: 1.2rem;
+  }
+  
+  .weekly-schedule td {
+    font-size: 1rem;
+  }

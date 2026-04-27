@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>짱구</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 사이드바 위치 및 호버 감지를 위한 스타일 수정 */
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 100px;
+      z-index: 1000;
+      background: rgba(249, 249, 249, 0.95);
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 15px 0 0 15px;
+      transition: all 0.3s ease;
+      /* 기본 상태: 투명하고 오른쪽으로 숨겨짐 */
+      opacity: 0;
+      transform: translateX(100%);
+      pointer-events: none; /* 평소에는 클릭 방지 */
+    }
+
+    /* 마우스 감지용 투명 영역 */
+    .sidebar-trigger {
+      position: fixed;
+      right: 0;
+      top: 100px;
+      width: 30px; /* 마우스를 갖다 대는 감지 폭 */
+      height: 300px;
+      z-index: 999;
+      background: transparent;
+    }
+
+    /* 마우스가 사이드바나 감지 영역에 올라갔을 때 */
+    .sidebar.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .weekly-schedule th { background-color: #ffeb3b; }
+    .post-form { margin-top: 20px; padding: 20px; background: #fff; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>짱구</h1>
+    <nav>
+      <ul>
+        <li><a href="https://gemini.google.com" target="_blank">제미나이</a></li>
+        <li><a href="#">여행지</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="memo.html">방명록</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="featured-post">
+      <div class="post-info">
+        <h2>나 너무 잘생겼다.</h2>
+        <p>나는 완벽한 사람이다</p>
+      </div>
+    </section>
+
+    <div class="slideWrap">
+        <div class="slideshow">
+            <img src="./myImg/img1.jpg" alt="Featured Post 1">
+            <img src="./myImg/img2.jpg" alt="Featured Post 2">
+            <img src="./myImg/img3.jpg" alt="Featured Post 3">
+        </div>
+    </div>
+
+    <table class="weekly-schedule">
+        <thead>
+          <tr>
+            <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td onclick="showAlert('여행일정짜기')">여행일정짜기</td>
+            <td onclick="showAlert('필요물품구매')">필요물품구매</td>
+            <td onclick="showAlert('장보기')">장보기</td>
+            <td onclick="showAlert('보험가입')">보험가입</td>
+            <td onclick="showAlert('체크리스트')">체크리스트 확인</td>
+            <td onclick="showAlert('신나는')">신나는 여행</td>
+            <td onclick="showAlert('복귀')">복귀</td>
+          </tr>
+        </tbody>
+      </table>
+  
+     <div class="post-form">
+        <h2>게시글 작성</h2>
+        <input type="text" id="post-title" placeholder="제목">
+        <textarea id="post-content" placeholder="내용"></textarea>
+        <button id="submit-btn">게시하기</button>
+      </div>
+  
+      <div id="post-container"></div>
+  </main>
+
+  <div class="sidebar-trigger" id="sidebar-trigger"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div id="user-content">
+      <h2 style="margin-top:0;">Online Users</h2>
+      <ul id="online-users" style="list-style:none; padding:0;">
+      </ul>
+    </div>
+  </aside>
+ 
+  <footer>
+    <p>&copy; 2023 여행 블로그. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
